@@ -1,0 +1,126 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* primary */
+  --Pale_blue: hsl(225, 100%, 94%);
+  --Bright_blue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+  --Very-pale_blue: hsl(225, 100%, 98%);
+  --Desaturated_blue: hsl(224, 23%, 55%);
+  --Dark_blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background: url("../images/pattern-background-desktop.svg") no-repeat;
+  background-color: var(--Pale_blue);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: inherit;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 1rem;
+  max-width: 360px;
+  min-width: 300px;
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  gap: 1.5rem;
+}
+
+p {
+  color: var(--Desaturated_blue);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.title-and-paragraph,
+.Cancel {
+  text-align: center;
+}
+
+.title-and-paragraph p {
+  font-weight: 500;
+}
+
+h1 {
+  color: var(--Dark_blue);
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Very-pale_blue);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.plan-price {
+  display: inherit;
+  gap: 20px;
+}
+
+.Annual {
+  font-weight: 700;
+  color: var(--Dark_blue);
+  padding-bottom: 5px;
+}
+
+.Change {
+  font-weight: 700;
+}
+.Change a:hover {
+  color: hsla(245, 75%, 52%, 0.5);
+  text-decoration: none;
+}
+
+.btn {
+  background-color: var(--Bright_blue);
+  padding: 1rem;
+
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(154, 154, 255, 0.588) 0px 10px 80px 0px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: hsla(245, 75%, 52%, 0.5);
+  transition: ease 0.4s;
+}
+.Cancel {
+  font-weight: 700;
+}
+.Cancel:hover {
+  cursor: pointer;
+  color: var(--Dark_blue);
+}
